@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 DPI = 300               # DPI (dots per inch)
-OUTPUT_FORMAT = "PNG" 
+OUTPUT_FORMAT = "PNG"  # "JPEG" or "PNG"
 JPEG_QUALITY = 95
 
 
