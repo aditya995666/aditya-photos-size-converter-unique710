@@ -1,10 +1,12 @@
 from flask import Flask, request, send_file
+from flask_cors import CORS   # ✅ import CORS
 from PIL import Image
 from io import BytesIO
 import datetime
 import os
 
 app = Flask(__name__)
+CORS(app)   # ✅ Enable CORS for all routes
 
 DPI = 300               # DPI (dots per inch)
 OUTPUT_FORMAT = "PNG"   # "JPEG" or "PNG"
@@ -73,3 +75,4 @@ def convert():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
+####
